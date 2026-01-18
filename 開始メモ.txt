@@ -1,0 +1,12 @@
+# プロジェクトディレクトリを作成し、そのディレクトリに移動して、Gitリポジトリを初期化
+$ mkdir -p /Users/it/20260119_nodejs && cd /Users/it/20260119_nodejs && git init
+ Initialized empty Git repository in /Users/it/20260119_nodejs/.git/
+
+# 空のapp.jsファイルを作成（Node.jsアプリのエントリーポイント用）
+$ touch app.js
+
+# すべてのファイルをステージングし、初回コミットを作成
+$ 20260119_nodejs % git add . && git commit -m "Initial commit"
+
+# GitHub上に公開リポジトリを作成し、ローカルリポジトリをプッシュ
+$ gh repo create 20260119_nodejs --public --source=. --push
