@@ -105,3 +105,42 @@ node hello.js
 - 型注釈（`: string`など）は開発中のエラー検出に使われる
 - コンパイル後は普通のJavaScriptになる（型は消える）
 - 大規模プロジェクトや複数人開発で特に有効
+
+## npm と npx
+
+### npm (Node Package Manager)
+
+パッケージのインストール・管理を行う。
+
+```bash
+npm install パッケージ名      # 依存関係としてインストール
+npm install -D パッケージ名   # 開発用依存関係としてインストール
+```
+
+### npx (Node Package eXecute)
+
+パッケージの実行を行う。
+
+```bash
+npx tsc hello.ts   # node_modulesのtscを実行
+npx cowsay "Hello" # インストールしていなくても一時的に実行可能
+```
+
+### npxの動作
+
+1. ローカル（`node_modules`）にあれば → それを実行
+2. なければ → `~/.npm/_npx/`にダウンロードして実行
+
+### プロジェクト初期化の基本手順
+
+```bash
+git init                       # Gitリポジトリを初期化
+npm init -y                    # package.jsonを作成
+echo "node_modules/" > .gitignore  # node_modulesを除外
+```
+
+オプション:
+```bash
+npx tsc --init    # TypeScript設定（tsconfig.json）
+npx eslint --init # ESLint設定
+```
