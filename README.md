@@ -144,3 +144,13 @@ echo "node_modules/" > .gitignore  # node_modulesを除外
 npx tsc --init    # TypeScript設定（tsconfig.json）
 npx eslint --init # ESLint設定
 ```
+
+### npm audit（セキュリティ監査）
+
+```bash
+npm audit            # 脆弱性をチェック
+npm audit fix        # 安全な範囲で自動修正
+npm audit fix --force # 強制修正（危険！）
+```
+
+**注意**: `--force`はバージョンを大きく変えることがあり、動作しなくなる可能性がある。学習用プロジェクトでは`npm audit`の警告は無視しても問題ない。
