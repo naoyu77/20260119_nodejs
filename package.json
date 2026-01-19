@@ -1,0 +1,25 @@
+{
+  "name": "20260119_nodejs",
+  "version": "1.0.0",
+  "description": "JavaScriptの非同期処理の基本。指定したミリ秒後に関数を実行する。",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naoyu77/20260119_nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/naoyu77/20260119_nodejs/issues"
+  },
+  "homepage": "https://github.com/naoyu77/20260119_nodejs#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}

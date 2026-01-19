@@ -59,3 +59,49 @@ node setTimeout_sample.js 4  # カウントダウン
 node setTimeout_sample.js 5  # イベントループ
 node setTimeout_sample.js 6  # ネスト
 ```
+
+## TypeScript
+
+JavaScriptに型を追加した言語。開発中にエラーを早期発見できる。
+
+### インストール
+
+```bash
+# package.jsonを作成
+npm init -y
+
+# TypeScriptとts-nodeをインストール
+npm install -D typescript ts-node
+
+# 設定ファイルを作成
+npx tsc --init
+```
+
+### 基本的な使い方
+
+```typescript
+// hello.ts
+function greet(name: string): string {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet('太郎'));
+// greet(123);  // エラー: 数値は文字列に渡せない
+```
+
+### 実行方法
+
+```bash
+# ts-nodeで直接実行（コンパイル不要）
+npx ts-node hello.ts
+
+# tscでコンパイルしてから実行
+npx tsc hello.ts  # hello.jsが生成される
+node hello.js
+```
+
+### ポイント
+
+- 型注釈（`: string`など）は開発中のエラー検出に使われる
+- コンパイル後は普通のJavaScriptになる（型は消える）
+- 大規模プロジェクトや複数人開発で特に有効
